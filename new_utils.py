@@ -14,7 +14,7 @@ import numpy as np
 from numpy.typing import NDArray
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
-ss=StandardScaler()
+stdscaler=StandardScaler()
 def scale_data(alp):
   scaled_x=alp.astype('float32')/255.0
   return scaled_x
