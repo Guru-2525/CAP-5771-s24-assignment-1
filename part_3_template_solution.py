@@ -108,8 +108,8 @@ class Section3:
 
         answer['plot_k_vs_score_train']=tup_train
         answer['plot_k_vs_score_test']=tup_test
-        answer['text_rate_accuracy_change']="Rate of accuracy change on test set, increases relatively faster(approx 0.05) from k =1 to k =2, and from then on(k=3,4,5) rate of change is relatively slower(approx 0.001) change"
-        answer['text_is_topk_useful_and_why']="Its not useful in this context, because it doesn't provide any meaningful insight, top_k_accuracy score best suits when there are 2+ classes and the given dataset is balanced. Its not the case in our problem."
+        answer['text_rate_accuracy_change']="The pace of accuracy enhancement on the test set shows a significant increase (approximately 0.05) from k = 1 to k = 2. Subsequently, from k = 3 to k = 5, the rate of improvement slows down notably, demonstrating a relatively minor change (approximately 0.001)."
+        answer['text_is_topk_useful_and_why']="In this context, the top_k_accuracy score doesn't offer much valuable insight since our dataset doesn't align with its ideal conditions. This metric is more suitable for scenarios with balanced datasets and multiple classes. However, our current problem doesn't meet these criteria."
         for i in cv_scores.keys():
             if i not in answer:
                 answer[i]={"score_train":cv_scores[i],"score_test":test_scores[i]}
